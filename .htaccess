@@ -1,7 +1,0 @@
-AuthUserFile /.htpasswd
-AuthName "nishiwaki-tanaka"
-AuthType Basic
-require valid-user
-<Files ~ "^.(htpasswd|htaccess)$">
-  deny from all
-</Files>
