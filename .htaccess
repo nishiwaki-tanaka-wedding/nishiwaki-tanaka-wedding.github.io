@@ -1,0 +1,7 @@
+AuthUserFile Users/ayako0224/git/nishiwaki-tanaka-wedding.github.io/index.html/.htpasswd
+AuthName "nishiwaki-tanaka"
+AuthType Basic
+require valid-user
+<Files ~ "^.(htpasswd|htaccess)$">
+  deny from all
+</Files>
