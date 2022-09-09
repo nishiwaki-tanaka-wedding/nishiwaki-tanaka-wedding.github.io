@@ -1,4 +1,4 @@
-AuthUserFile Users/ayako0224/git/nishiwaki-tanaka-wedding.github.io/index.html/.htpasswd
+AuthUserFile /.htpasswd
 AuthName "nishiwaki-tanaka"
 AuthType Basic
 require valid-user
