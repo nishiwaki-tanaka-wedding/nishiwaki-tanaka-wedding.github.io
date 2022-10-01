@@ -15,31 +15,37 @@
     />
     <link rel="stylesheet" href="./style.css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Raleway:wght@700&family=Zen+Maru+Gothic:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="./question.js"></script>
 
     <title>nishiwaki tanaka wedding</title>
   </head>
 
   <body>
-    <script type="text/javascript">
-      function gate() {
-        var UserInput = prompt("パスワードを入力して下さい:", "");
-        location.href = UserInput + ".html";
-      }
-    </script>
-    <main>
-      <input type="button" value="パスワードを入力" onclick="gate();" />
+    <main id="pass-page" class="container">
+      <form id="form">
+        <input
+          type="text"
+          placeholder="パスワードを入力して下さい。"
+          id="pass"
+        />
+        <button type="submit">送信</button>
+      </form>
     </main>
 
+    <script type="text/javascript">
+      document.getElementById("form").onsubmit = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var userInput = document.getElementById("pass").value;
+        location.href = userInput + ".html";
+      };
+    </script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

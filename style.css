@@ -1,0 +1,57 @@
+:root {
+  --c-bg: #fffdf6;
+  --c-brown: #52370c;
+  --c-gray: #c4c4c4;
+  --c-green: #0c4b2d;
+  --c-orange: #e07c2c;
+  --f-title: "Raleway", sans-serif;
+  --f-en: "Nunito", sans-serif;
+  --f-jp: "Zen Maru Gothic", sans-serif;
+  --f-h1: 32px;
+  --f-h2: 24px;
+  --f-l: 20px;
+  --f-m: 16px;
+  --f-s: 12px;
+}
+
+body {
+  background-color: var(--c-bg);
+  padding: 40px 0;
+  color: var(--c-brown);
+}
+
+section {
+  margin-bottom: 76px;
+}
+
+h1 {
+  text-align: center;
+  font-size: var(--f-h1);
+  color: var(--c-green);
+  font-weight: bold;
+  font-family: var(--f-title);
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: var(--f-h2);
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+h2.en {
+  color: var(--c-green);
+  font-family: var(--f-en);
+}
+
+h2.jp {
+  font-family: var(--f-jp);
+}
+
+h2.nishiwaki {
+  color: var(--c-green);
+}
+
+h2.tanaka {
+  color: var(--c-orange);
+}
