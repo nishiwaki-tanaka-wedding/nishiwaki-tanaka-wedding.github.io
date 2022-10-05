@@ -24,6 +24,10 @@ section {
   margin-bottom: 60px;
 }
 
+img {
+  object-fit: contain;
+}
+
 h1 {
   text-align: center;
   font-size: var(--f-h1);
@@ -68,6 +72,14 @@ h3 {
   align-items: center;
   flex-direction: column;
   gap: 32px;
+}
+
+.profile-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .profile {
