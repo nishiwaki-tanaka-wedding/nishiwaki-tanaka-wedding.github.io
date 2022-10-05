@@ -21,7 +21,7 @@ body {
 }
 
 section {
-  margin-bottom: 76px;
+  margin-bottom: 60px;
 }
 
 h1 {
@@ -39,19 +39,73 @@ h2 {
   margin-bottom: 16px;
 }
 
-h2.en {
+.en {
   color: var(--c-green);
   font-family: var(--f-en);
 }
 
-h2.jp {
+.jp {
   font-family: var(--f-jp);
 }
 
-h2.nishiwaki {
+.nishiwaki {
   color: var(--c-green);
 }
 
-h2.tanaka {
+.tanaka {
   color: var(--c-orange);
+}
+
+h3 {
+  font-size: var(--f-l);
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.profile {
+  font-family: var(--f-jp);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  max-width: 350px;
+}
+
+.profile .profile-list {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile .profile-list .data {
+  display: flex;
+}
+
+.profile .profile-list .data .prop {
+  width: 130px;
+  margin-right: 8px;
+}
+
+.profile .childhood {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .profile-wrapper {
+    flex-direction: row;
+    align-items: unset;
+    gap: 48px;
+  }
 }
