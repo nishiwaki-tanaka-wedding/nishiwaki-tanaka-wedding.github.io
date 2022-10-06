@@ -22,17 +22,35 @@
       rel="stylesheet"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <head prefix="website"></head>
+    <meta
+      property="og:url"
+      content="https://nishiwaki-tanaka-wedding.github.io/24nh"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TOP" />
+    <meta property="og:description" content="2022.10.08" />
+    <meta property="og:site_name" content="Nishiwaki Tanaka wedding" />
+    <meta property="og:image" content="./img/2shot" />
+    <meta name="twitter:card" content="Summary with Large Image" />
+
     <meta name="robots" content="noindex" />
 
-    <title>nishiwaki tanaka wedding</title>
+    <title>Nishiwaki Tanaka wedding</title>
   </head>
 
   <body>
     <main>
+      <div class="bg">
+        <span class="title">
+          <span>2022.10.08</span>
+          <span>~ Welcome ~</span>
+        </span>
+      </div>
       <section id="top">
         <div class="container">
           <div class="row">
-            <h1 class="col-12 top-fade-in top-header">wedding festival</h1>
+            <h1 class="col-12 top-fade-in top-header">Wedding Festival</h1>
             <div
               class="col-12 col-lg-6 mb-4 text-center top-fade-in top-header"
             >
@@ -172,14 +190,14 @@
               <img src="./img/yutaka.png" alt="新婦父 豊(ゆたか)" />
               <h3>新婦父 豊(ゆたか)</h3>
               <p>
-                三姉妹にアウトドアの楽しさを教えてくれた雑学王！作ってくれたカレーは絶品！！
+                三姉妹にアウトドアの楽しさを<br />教えてくれた雑学王！<br />作ってくれたカレーは絶品！！
               </p>
             </div>
             <div class="profile">
               <img src="./img/akemi.png" alt="新婦母 明美(あけみ)" />
               <h3>新婦母 明美(あけみ)</h3>
               <p>
-                多趣味で多才なパワフルママ！！餃子の美味しさは世界一！！英会話を勉強中
+                多趣味で多才なパワフルママ！！<br />餃子の美味しさは世界一！！<br />英会話を勉強中
               </p>
             </div>
           </div>
@@ -194,26 +212,25 @@
               <div class="profile">
                 <h3>新婦妹 実香子(みかこ)</h3>
                 <p>
-                  娘2人を育てながら看護師資格を取得した頑張り屋！そしてオシャレ番長！
+                  娘2人を育てながら看護師資格を取得した頑張り屋！<br />そしてオシャレ番長！
                 </p>
               </div>
               <div class="profile">
                 <h3>義弟　貴大(たかひろ)</h3>
                 <p>
-                  どんな時でも穏やかです！存在が癒しのパワースポット☆<br />
-                  ニックネームは「天ちゃん」
+                  どんな時でも穏やかです！<br />存在が癒しのパワースポット☆<br />ニックネームは「天ちゃん」
                 </p>
               </div>
               <div class="profile">
                 <h3>姪　美波音(みなと)</h3>
                 <p>
-                  絵の才能抜群な優しいお姉さん！今日のためにウェルカムボードを作ってくれました！
+                  絵の才能抜群な優しいお姉さん！<br />今日のためにウェルカムボードを作ってくれました！
                 </p>
               </div>
               <div class="profile">
                 <h3>姪　樹希(いつき)</h3>
                 <p>
-                  マラソン大会では校内新記録！運動神経抜群な元気はつらつ娘です！
+                  マラソン大会では校内新記録！<br />運動神経抜群な元気はつらつ娘です！
                 </p>
               </div>
             </div>
@@ -229,19 +246,19 @@
               <div class="profile">
                 <h3>新婦妹　瑞生(みずき)</h3>
                 <p>
-                  最近は姉妹の中で1番のしっかり者！！気になった事はとことん調べる研究家✏️
+                  最近は姉妹の中で1番のしっかり者！！<br />気になった事はとことん調べる研究家✏️
                 </p>
               </div>
               <div class="profile">
                 <h3>義弟　寛明(ひろあき)</h3>
                 <p>
-                  仙台出身のバスケットマンand手作りピアスを贈る愛妻家！ニックネームは「むらしー」
+                  仙台出身のバスケットマンand手作りピアスを贈る愛妻家！<br />ニックネームは「むらしー」
                 </p>
               </div>
               <div class="profile">
                 <h3>甥　陽紀(はるき)</h3>
                 <p>
-                  元気いっぱいなわんぱくボーイ！4月から保育園に通い始めました☆
+                  元気いっぱいなわんぱくボーイ！<br />4月から保育園に通い始めました☆
                 </p>
               </div>
             </div>
@@ -348,7 +365,21 @@
       </section>
     </main>
     <script>
+      const CLASSNAME = "-visible";
+      const TIMEOUT = 1000;
+      const $target = $(".bg");
+      setTimeout(() => {
+        $target.addClass(CLASSNAME);
+      }, TIMEOUT);
+      setTimeout(() => {
+        $target.removeClass(CLASSNAME);
+        $target.addClass("d-none");
+      }, TIMEOUT * 4);
+
       $(function () {
+        if (window.scrollY > 0) {
+          $("body, html").scrollTop(0);
+        }
         $(window).scroll(function () {
           $(".fade-in").each(function () {
             var elemPos = $(this).offset().top;

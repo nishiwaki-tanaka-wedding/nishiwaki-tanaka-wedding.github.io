@@ -22,6 +22,17 @@
       rel="stylesheet"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <head prefix="website"></head>
+    <meta
+      property="og:url"
+      content="https://nishiwaki-tanaka-wedding.github.io/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TOP" />
+    <meta property="og:description" content="2022.10.08" />
+    <meta property="og:site_name" content="Nishiwaki Tanaka wedding" />
+    <meta property="og:image" content="./img/2shot" />
+    <meta name="twitter:card" content="Summary with Large Image" />
 
     <title>nishiwaki tanaka wedding</title>
   </head>
@@ -31,7 +42,7 @@
       <section id="top">
         <div class="container">
           <h1 class="col-12">wedding festival</h1>
-          <p>
+          <p class="text-center">
             みなさま、本日はご多忙の中お集まりいただきありがとうございます。<br />
             こちらのサイトはプライバシー保護のため、パスワードを設けております。<br />
             招待状に記載されているパスワードを記入の上、お進み下さい。
@@ -49,7 +60,7 @@
         e.preventDefault();
         e.stopPropagation();
         var userInput = document.getElementById("pass").value;
-        location.href = userInput + ".html";
+        location.href = userInput;
       };
     </script>
     <script
