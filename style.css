@@ -1,4 +1,5 @@
 :root {
+  --c-white: #fff;
   --c-bg: #fffdf6;
   --c-brown: #52370c;
   --c-gray: #c4c4c4;
@@ -7,11 +8,12 @@
   --f-title: "Raleway", sans-serif;
   --f-en: "Nunito", sans-serif;
   --f-jp: "Zen Maru Gothic", sans-serif;
-  --f-h1: 32px;
-  --f-h2: 24px;
-  --f-l: 20px;
-  --f-m: 16px;
-  --f-s: 12px;
+  --f-h1: 34px;
+  --f-h2: 26px;
+  --f-l: 22px;
+  --f-m: 18px;
+  --f-s: 14px;
+  font-size: var(--f-m);
 }
 
 body {
@@ -44,16 +46,65 @@ h2 {
   margin-bottom: 16px;
 }
 
+.fade-in {
+  opacity: 0.1;
+  transform: translate(0, 50px);
+  transition: all 500ms;
+}
+.fade-in.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.top-fade-in {
+  opacity: 0;
+  animation: fade-in 1s forwards;
+}
+
+.top-header.top-fade-in:nth-child(2) {
+  animation-delay: 1s;
+}
+.top-header.top-fade-in:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.top-footer.top-fade-in:nth-child(1) {
+  animation-delay: 2.5s;
+}
+.top-footer.top-fade-in:nth-child(2) {
+  animation-delay: 3s;
+}
+.top-footer.top-fade-in:nth-child(3) {
+  animation-delay: 3.5s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+button {
+  background: linear-gradient(#105433 0%, #60be91 100%);
+}
+
+a.link {
+  background-color: var(--c-white);
+}
+
 a.link,
 button {
-  color: #fff;
+  color: var(--c-white);
   font-weight: bold;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(#105433 0%, #60be91 100%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   padding: 8px 20px;
   user-select: none;
@@ -65,6 +116,7 @@ button {
 a.link:hover,
 button {
   text-decoration: none !important;
+  box-shadow: none;
 }
 
 a.link::before,
@@ -110,7 +162,7 @@ form input {
   border-radius: 20px;
   padding: 6px 12px;
   border: 1.5px solid var(--c-brown);
-  background-color: #fff;
+  background-color: var(--c-white);
 }
 
 form input::placeholder {

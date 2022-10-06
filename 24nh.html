@@ -32,21 +32,23 @@
       <section id="top">
         <div class="container">
           <div class="row">
-            <h1 class="col-12">wedding festival</h1>
-            <div class="col-12 col-lg-6 mb-4 text-center">
+            <h1 class="col-12 top-fade-in top-header">wedding festival</h1>
+            <div
+              class="col-12 col-lg-6 mb-4 text-center top-fade-in top-header"
+            >
               <img src="./img/top.png" alt="2shot" />
             </div>
             <div class="col-12 col-lg-6">
-              <h2 class="en">Greeting</h2>
-              <p>
+              <h2 class="en top-fade-in top-footer">Greeting</h2>
+              <p class="top-fade-in top-footer">
                 みなさま、本日はご多忙の中お集まりいただきありがとうございます。
               </p>
-              <p class="text-right">西脇<br />田中</p>
+              <p class="text-right top-fade-in top-footer">西脇<br />田中</p>
             </div>
           </div>
         </div>
       </section>
-      <section id="profile">
+      <section id="profile" class="fade-in">
         <div class="container">
           <h2 class="en">Profile</h2>
           <div class="profile-wrapper">
@@ -123,7 +125,7 @@
           </div>
         </div>
       </section>
-      <section id="nishiwaki">
+      <section id="nishiwaki" class="fade-in">
         <div class="container">
           <h2 class="jp nishiwaki">西脇家</h2>
           <div class="profile-wrapper">
@@ -140,7 +142,7 @@
           </div>
         </div>
       </section>
-      <section id="imaizumi">
+      <section id="imaizumi" class="fade-in">
         <div class="container">
           <h2 class="jp nishiwaki">今泉家</h2>
           <div class="profile-wrapper">
@@ -162,7 +164,7 @@
           </div>
         </div>
       </section>
-      <section id="tanaka">
+      <section id="tanaka" class="fade-in">
         <div class="container">
           <h2 class="jp tanaka">田中家</h2>
           <div class="profile-wrapper">
@@ -183,7 +185,7 @@
           </div>
         </div>
       </section>
-      <section id="sudo">
+      <section id="sudo" class="fade-in">
         <div class="container">
           <h2 class="jp tanaka">須藤家</h2>
           <div class="profile-wrapper">
@@ -218,7 +220,7 @@
           </div>
         </div>
       </section>
-      <section id="murayama">
+      <section id="murayama" class="fade-in">
         <div class="container">
           <h2 class="jp tanaka">村山家</h2>
           <div class="profile-wrapper">
@@ -246,7 +248,7 @@
           </div>
         </div>
       </section>
-      <section id="memory">
+      <section id="memory" class="fade-in">
         <div class="container">
           <h2 class="en">Memory</h2>
           <div class="row">
@@ -329,13 +331,13 @@
                 class="link"
                 href="https://photos.app.goo.gl/1T6QuJokCtEXxu8A6"
                 target="_blank"
-                >Google フォト</a
-              >
+                ><img src="./img/google-photo.svg" alt="Google フォト"
+              /></a>
             </div>
           </div>
         </div>
       </section>
-      <section id="message">
+      <section id="message" class="fade-in">
         <div class="container">
           <h2 class="en">Our message</h2>
           <p>
@@ -345,6 +347,20 @@
         </div>
       </section>
     </main>
+    <script>
+      $(function () {
+        $(window).scroll(function () {
+          $(".fade-in").each(function () {
+            var elemPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight + 200) {
+              $(this).addClass("scroll-in");
+            }
+          });
+        });
+      });
+    </script>
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
