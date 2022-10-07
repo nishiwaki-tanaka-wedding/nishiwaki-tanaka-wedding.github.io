@@ -109,7 +109,36 @@ h1 {
 h2 {
   font-size: var(--f-h2);
   font-weight: bold;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+h2.nishiwaki,
+h2.tanaka {
+  position: relative;
+  border-bottom: 5px solid;
+  display: inline-block;
+  color: var(--c-brown);
+  padding-bottom: 4px;
+}
+
+h2.nishiwaki::before,
+h2.tanaka::before {
+  position: absolute;
+  content: "";
+  display: block;
+  border-bottom: 5px solid;
+  bottom: -5px;
+  width: 60%;
+}
+
+h2.nishiwaki,
+h2.tanaka::before {
+  border-color: var(--c-orange);
+}
+
+h2.nishiwaki::before,
+h2.tanaka {
+  border-color: var(--c-green);
 }
 
 .fade-in {
